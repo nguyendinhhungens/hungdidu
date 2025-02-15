@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hung Diduuu</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #091921;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        #yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        #no {
+            background-color: #FF0000;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Làm ny t khong???</h1>
+    <div>
+        <button id="yes" onclick="showMessage()">Có</button>
+        <button id="no" onmouseover="moveButton()">Không</button>
+    </div>
+    <h2 id="message" style="display: none;">HUPPPPP</h2>
+    
+    <script>
+        function moveButton() {
+            let button = document.getElementById("no");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+        
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
